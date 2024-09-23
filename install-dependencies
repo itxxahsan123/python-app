@@ -1,4 +1,6 @@
 #!/bin/bash
-sudo systemctl stop myapp.service
-sudo yum install -y python3-pip
-pip3 install -r /home/ec2-user/python-test/requirements.txt
+sudo systemctl stop myapp.service || { echo 'Failed to stop service'; exit 1; }
+sudo yum install -y python3-pip || { echo 'Failed to install pip'; exit 1; }
+pip3 install -r /home/ec2-user/python-test/requirements.txt || { echo 'Failed to install dependencies'; exit 1; }
+sudo systemctl start myapp.service || { echo 'Failed to start service'; exit 1; }
+echo 'Deployment succeeded!'
