@@ -2,7 +2,7 @@ version: 0.0
 os: ubuntu
 files:
   - source: /
-    destination: /home/ubuntu
+    destination: /home/ubuntu/python-app
 file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
