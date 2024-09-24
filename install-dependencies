@@ -1,6 +1,9 @@
 #!/bin/bash
 sudo systemctl stop myapp.service
 sudo apt install -y python3-pip
+sudo apt-get install -y python3-venv
+python3 -m venv myenv
+source myenv/bin/activate
 pip3 install -r /home/ubuntu/python-test/requirements.txt
 sudo systemctl start myapp.service
 sudo systemctl status myapp.service
