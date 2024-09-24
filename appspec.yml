@@ -2,7 +2,7 @@ version: 0.0
 os: ubuntu
 files:
   - source: /
-    destination: /home/ubuntu/python.text
+    destination: /home/ubuntu
 file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
