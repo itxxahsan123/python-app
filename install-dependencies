@@ -3,6 +3,6 @@ sudo systemctl stop myapp.service
 sudo apt install python3-pip -y
 sudo apt install python3-venv
 python3 -m venv myenv
-source venv/bin/activate
-pip3 install -r /home/ubuntu/python-test/python-app/requirements.txt
+source /home/ubuntu/python-test-venv/bin/activate
+pip3 install -r /home/ubuntu/python-test/requirements.txt
 exit
